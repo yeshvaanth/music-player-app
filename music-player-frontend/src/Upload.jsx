@@ -23,10 +23,10 @@ const Upload = () => {
     const formData = new FormData();
     formData.append('title', title);
     formData.append('artist', artist);
-    formData.append('file', file);
+    formData.append('song', file);
 
     try {
-      await api.post('/songs/upload', formData);
+      await api.post('/songs/uploads', formData);
       alert('Song uploaded successfully');
       setTitle('');
       setArtist('');
